@@ -1,0 +1,10 @@
+.chart-container {
+    display: grid;
+    height: 400px;
+}
+
+
+
+.ngx-charts {
+      fill: #A0AABE;
+}
