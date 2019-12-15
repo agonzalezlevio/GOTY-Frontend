@@ -10,6 +10,12 @@ import { GotyComponent } from './pages/goty/goty.component';
 
 // Modules
 import { ComponentsModule } from './components/components.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+
+// Enviroments Firebase
+import { environment } from 'src/environments/environment.firebase';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,9 @@ import { ComponentsModule } from './components/components.module';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
